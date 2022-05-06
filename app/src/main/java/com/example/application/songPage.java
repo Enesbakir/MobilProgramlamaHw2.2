@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
@@ -53,17 +54,44 @@ public class songPage extends AppCompatActivity {
         initialTime = (TextView)findViewById(R.id.initialTime);
         totalTime = (TextView)findViewById(R.id.totalTime);
         setSongPage();
-        prevSong.setOnClickListener(view -> prevSong());
-        nextSong.setOnClickListener(view -> nextSong());
-        start.setOnClickListener( view -> playSong());
-        pause.setOnClickListener(view -> pauseSong());
-        stop.setOnClickListener(view -> stopSong());
+        prevSong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevSong();
+            }
+        });
+        nextSong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nextSong();
+            }
+        });
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playSong();
+            }
+        });
+        pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pauseSong();
+            }
+        });
+        stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stopSong();
+            }
+        });
     }
 
     void setSongPage(){
+
         Uri artworkUri = Uri.parse("content://media/external/audio/media/"+item.get(position).getId()+"/albumart");
-        totalTime.setText(createTime(item.get(position).getDuration()));
         songIcon.setImageURI(artworkUri);
+        totalTime.setText(createTime(item.get(position).getDuration()));
+
     }
 
     private void playSong(){

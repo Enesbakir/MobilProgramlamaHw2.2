@@ -6,11 +6,11 @@
         <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/drawable-anydpi/ic_player.xml" value="0.302" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/drawable-anydpi/ic_startButton.xml" value="0.202" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/activity_login.xml" value="0.21197916666666666" />
-        <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/activity_main.xml" value="0.176" />
-        <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/activity_media_player.xml" value="0.21105072463768115" />
+        <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/activity_media_player.xml" value="0.20614035087719298" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/activity_playlist_page.xml" value="0.322463768115942" />
-        <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/activity_register_page.xml" value="0.1" />
-        <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/activity_song_page.xml" value="0.264" />
+        <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/activity_register_page.xml" value="0.176" />
+        <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/activity_song_page.xml" value="0.22926829268292684" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/item_song_card.xml" value="0.4" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/main_page.xml" value="0.2984375" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/Application/app/src/main/res/layout/playlist_card.xml" value="0.322463768115942" />
@@ -26,7 +26,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.176" />
+        <option name="scale" value="0.4" />
       </ProjectState>
     </option>
   </component>

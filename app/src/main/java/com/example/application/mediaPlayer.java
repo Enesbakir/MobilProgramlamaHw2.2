@@ -57,7 +57,9 @@ public class mediaPlayer extends AppCompatActivity {
         ContentResolver contentResolver = getContentResolver();
         Uri uri =  MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
         String sortOrder = MediaStore.Audio.Media.TITLE+" ASC";
-        Cursor cursor= contentResolver.query(uri,null,null,null,sortOrder);
+        String selection= MediaStore.Audio.Media.IS_MUSIC +" !=0";
+
+        Cursor cursor= contentResolver.query(uri,null,selection,null,sortOrder);
         if(cursor == null){
         }else if(!cursor.moveToFirst()){
         }else{
