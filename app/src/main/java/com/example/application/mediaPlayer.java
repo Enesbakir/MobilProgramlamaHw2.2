@@ -42,23 +42,19 @@ public class mediaPlayer extends AppCompatActivity {
         playLists = (ImageButton)findViewById(R.id.allPlaylistButton);
         allSongs = (ImageButton)findViewById(R.id.allSongsButton);
         ArrayList<MyListt> data = new ArrayList<MyListt>();
-
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
         }
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
         }
-
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 1);
         }
-
         ContentResolver contentResolver = getContentResolver();
         Uri uri =  MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
         String sortOrder = MediaStore.Audio.Media.TITLE+" ASC";
         String selection= MediaStore.Audio.Media.IS_MUSIC +" !=0";
-
         Cursor cursor= contentResolver.query(uri,null,selection,null,sortOrder);
         if(cursor == null){
         }else if(!cursor.moveToFirst()){
@@ -87,7 +83,6 @@ public class mediaPlayer extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-
         allSongs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,7 +93,6 @@ public class mediaPlayer extends AppCompatActivity {
                 recyclerView.setAdapter(adapter);
             }
         });
-
         /*playLists.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,10 +102,4 @@ public class mediaPlayer extends AppCompatActivity {
             }
         });*/
     }
-
-
-
-
-
-
 }

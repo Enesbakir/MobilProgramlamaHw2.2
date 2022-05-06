@@ -90,13 +90,13 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.ViewHolder>{
         public void onClick(View view) {
             if(view == sendButton){
                 sendFile(view,getLayoutPosition());
-            } else if (view == deleteButton ) {
+            }/* else if (view == deleteButton ) {
                 deleteFile(view,getLayoutPosition());
-            }
+            }*/
         }
     }
 
-    private void deleteFile(View view,int position){
+    /*private void deleteFile(View view,int position){
         ContentResolver resolver=view.getContext().getApplicationContext().getContentResolver();
          ;
         String Path=listts.get(position).getPath();
@@ -108,9 +108,7 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.ViewHolder>{
                 Toast.makeText(view.getContext(),"olduuuu",Toast.LENGTH_SHORT).show();
             }
         }
-
-
-    }
+    }*/
     private void sendFile(View view,int position){
         Context context = view.getContext();
         Intent intent = new Intent(Intent.ACTION_SEND);

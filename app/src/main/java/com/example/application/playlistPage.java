@@ -1,4 +1,4 @@
-/*
+
 package com.example.application;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,15 +16,8 @@ public class playlistPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playlist_page);
 
-        RecyclerView recyclerView= (RecyclerView)findViewById(R.id.playlistRecyclerView);
-        playlistAdapter adapter =new playlistAdapter(data);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
     }
-
-
     private void createPlaylist(){
 
     }
-}*/
+}

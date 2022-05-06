@@ -44,15 +44,12 @@ public class MyListt implements Serializable {
     public int getDuration() {
         return duration;
     }
-
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
-
     public String getSongWriterName() {
         return songWriterName;
     }
