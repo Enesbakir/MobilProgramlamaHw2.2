@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="53dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#B8F1F8">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="49dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/songTitle"
+            android:layout_width="152dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/songWriter"
+            android:layout_width="152dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/icon"
+            app:layout_constraintTop_toBottomOf="@+id/songTitle" />
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="#ECF8EA"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_share_button" />
+
+        <ImageButton
+            android:id="@+id/fileDeleteButton"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="#ECF8EA"
+            android:scaleType="center"
+            app:layout_constraintEnd_toStartOf="@+id/sendButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_delete_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

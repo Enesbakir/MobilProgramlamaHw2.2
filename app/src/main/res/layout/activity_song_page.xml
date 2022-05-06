@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCFADB"
+    tools:context=".songPage">
+
+    <ImageView
+        android:id="@+id/songIcon"
+        android:layout_width="296dp"
+        android:layout_height="275dp"
+        android:layout_marginTop="108dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/songButtonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="#DCFADB"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songIcon">
+
+        <ImageButton
+            android:id="@+id/prevSong"
+            android:layout_width="45dp"
+            android:layout_height="42dp"
+            android:layout_marginRight="20dp"
+            android:background="#D3F8F4"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_prev_song"
+            tools:srcCompat="@drawable/ic_prev_song" />
+
+        <ImageButton
+            android:id="@+id/stopButton"
+            android:layout_width="45dp"
+            android:layout_height="42dp"
+            android:layout_marginRight="20dp"
+            android:background="#D3F8F4"
+            app:srcCompat="@drawable/ic_stop_button" />
+
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="45dp"
+            android:layout_height="42dp"
+            android:layout_marginRight="20dp"
+            android:background="#D3F8F4"
+            app:srcCompat="@drawable/ic_start_button" />
+
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="45dp"
+            android:layout_height="42dp"
+            android:layout_marginRight="20dp"
+            android:background="#D3F8F4"
+            app:srcCompat="@drawable/ic_pause_button" />
+
+        <ImageButton
+            android:id="@+id/nextSong"
+            android:layout_width="45dp"
+            android:layout_height="42dp"
+            android:background="#D3F8F4"
+            app:srcCompat="@drawable/ic_next_song" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="289dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:progressTint="#67DFF4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songButtonLayout" />
+
+    <TextView
+        android:id="@+id/initialTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="68dp"
+        android:text="0:00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songButtonLayout" />
+
+    <TextView
+        android:id="@+id/totalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="48dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songButtonLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

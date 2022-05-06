@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Application</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="surname">Surname</string>
+</resources>
