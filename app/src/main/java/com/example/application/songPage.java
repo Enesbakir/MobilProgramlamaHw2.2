@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 
+import android.content.IntentFilter;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -36,6 +37,7 @@ public class songPage extends AppCompatActivity {
     ArrayList<MyListt> item;
     Handler handler;
     int position;
+    MBroadcastReceiver receiver= new MBroadcastReceiver();
     Runnable runnable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ public class songPage extends AppCompatActivity {
         setContentView(R.layout.activity_song_page);
         item= (ArrayList<MyListt>) getIntent().getSerializableExtra("List");
         position = getIntent().getIntExtra("position",0);
+        IntentFilter filter = new IntentFilter("com.example.application.Broadcast");
+        registerReceiver(receiver, filter);
         handler = new Handler();
         songIcon = (ImageView)findViewById(R.id.songIcon);
         start = (ImageButton) findViewById(R.id.playButton);
@@ -97,6 +101,7 @@ public class songPage extends AppCompatActivity {
     private void playSong(){
         Uri pathUri=  Uri.parse("content://media/external/audio/media/"+item.get(position).getId());
         if(music == null){
+
             music = MediaPlayer.create(getApplicationContext(),pathUri);
             music.start();
         }
@@ -159,10 +164,10 @@ public class songPage extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        if(music != null){
+        /*if(music != null){
             music.release();
             music = null;
-        }
+        }*/
     }
 
     protected void initializeSeekBar(){
@@ -193,5 +198,9 @@ public class songPage extends AppCompatActivity {
         return duration;
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(receiver);
+    }
 }

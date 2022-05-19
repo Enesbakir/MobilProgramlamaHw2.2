@@ -15,6 +15,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Application" >
+        <receiver
+            android:name=".MBroadcastReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.example.application.Broadcast" />
+            </intent-filter>
+        </receiver>
         <activity
             android:name=".playlistPage"
             android:exported="false" />
